@@ -4,25 +4,27 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-4 text-white h-[44vh] px-5 md:px-0 text-xs md:text-base">
-        <div className="flex gap-6 md:gap-20 font-bold md:text-5xl justify-center items-center text-3xl">Buy Me A Chai <span><img className="invertImg" src="/tea.gif" width={88} alt="" /></span></div>
+      <div className="flex justify-center flex-col gap-4 items-center text-white h-[44vh] px-5 md:px-0 text-xs md:text-base  ">
+        <div className="font-bold flex gap-6 md:gap-20 md:text-5xl justify-center items-center text-3xl">Get Me a Chai <span><img className="invertImg" src="/tea.gif" width={88} alt="" /></span></div>
         <p className="text-center md:text-left">
           A crowdfunding platform for creators to fund their projects.
 
         </p>
         <p className="text-center md:text-left">
 
-          A place where your fans can buy you a chai. Unleash the power of your fans and get your projects funded. Start Now!
+          A place where your fans can buy you a chai. Unleash the power of your fans and get your projects funded.
         </p>
         <div>
           <Link href={"/login"}>
             <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 cursor-pointer">Start Here</button></Link>
+
           <Link href={"/about"}>
             <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 cursor-pointer">Read More</button></Link>
+
         </div>
       </div>
-
-      <div className="bg-white h-1 opacity-10"></div>
+      <div className="bg-white h-1 opacity-10">
+      </div>
 
       <div className="text-white container mx-auto pb-32 pt-14 px-10">
         <h2 className="text-3xl font-bold text-center mb-14">Your Fans can buy you a Chai</h2>
@@ -44,8 +46,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="bg-white h-1 opacity-10"></div>
+      <div className="bg-white h-1 opacity-10">
+      </div>
 
       <div className="text-white container mx-auto pb-32 pt-14 flex flex-col items-center justify-center">
         <h2 className="text-3xl font-bold text-center mb-14">Learn more about us</h2>
@@ -53,6 +55,7 @@ export default function Home() {
         <div className="w-[90%] h-[40vh] md:w-[50%] md:h-[40vh] lg:w-[50%] lg:h-[40vh] xl:w-[50%] xl:h-[40vh]">
           <iframe className="w-full h-full" src="https://www.youtube.com/embed/cJT3EhZG36c?si=cxJeuFcAj0Kn_CNL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
+
       </div>
     </>
   );
