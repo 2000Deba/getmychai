@@ -23,31 +23,53 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="bg-white h-1 opacity-10">
-      </div>
+      <div className="bg-white h-1 opacity-10"></div>
 
       <div className="text-white container mx-auto pb-32 pt-14 px-10">
-        <h2 className="text-3xl font-bold text-center mb-14">Your Fans can buy you a Chai</h2>
-        <div className="flex gap-5 justify-around">
-          <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt="" />
-            <p className="font-bold text-center">Fans want to help</p>
-            <p className="text-center">Your fans are available to support you</p>
+        <h2 className="text-3xl font-bold text-center mb-14">
+          Your Fans can buy you a Chai
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
+          <div className="item h-full p-6 rounded-2xl bg-slate-800 flex flex-col justify-between items-center text-center space-y-3 shadow-md">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/man.gif"
+              alt="" />
+            <div>
+              <p className="font-bold">Fans want to help</p>
+              <p>Your fans are available to support you</p>
+            </div>
           </div>
-          <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt="" />
-            <p className="font-bold text-center">Fans want to contribute</p>
-            <p className="text-center">Your fans are willing to contribute financially</p>
+
+          <div className="item h-full p-6 rounded-2xl bg-slate-800 flex flex-col justify-between items-center text-center space-y-3 shadow-md">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/coin.gif"
+              alt="" />
+            <div>
+              <p className="font-bold">Fans want to contribute</p>
+              <p>Your fans are willing to contribute financially</p>
+            </div>
           </div>
-          <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt="" />
-            <p className="font-bold text-center">Fans want to collaborate</p>
-            <p className="text-center">Your fans are ready to collaborate with you</p>
+
+          <div className="item h-full p-6 rounded-2xl bg-slate-800 flex flex-col justify-between items-center text-center space-y-3 shadow-md">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/group.gif"
+              alt="" />
+            <div>
+              <p className="font-bold">Fans want to collaborate</p>
+              <p>Your fans are ready to collaborate with you</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-white h-1 opacity-10">
-      </div>
+
+      <div className="bg-white h-1 opacity-10"></div>
 
       <div className="text-white container mx-auto pb-32 pt-14 flex flex-col items-center justify-center">
         <h2 className="text-3xl font-bold text-center mb-14">Learn more about us</h2>
