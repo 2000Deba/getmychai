@@ -10,31 +10,37 @@ import { Bounce } from 'react-toastify';
 const Dashboard = () => {
     const { data: session, update } = useSession()
     const router = useRouter()
-    const [form, setform] = useState({})
+    const [form, setForm] = useState({})
 
     useEffect(() => {
-
         if (!session) {
-            router.push('/login')
+            router.push("/login");
+        } else {
+            if (Object.keys(form).length === 0) {
+                getData()
+            }
         }
-        else {
-            getData()
-        }
-    }, [])
+    }, [router, session])
 
     const getData = async () => {
-        let u = await fetchuser(session.user.name)
-        setform(u)
+        if (session) {
+            const data = await fetchuser(session.user.name)
+            setForm(data)
+        }
     }
 
     const handleChange = (e) => {
-        setform({ ...form, [e.target.name]: e.target.value })
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
     }
 
     const handleSubmit = async (e) => {
 
-        let a = await updateProfile(e, session.user.name)
-        toast('Profile Updated', {
+        const response = await updateProfile(form, session.user.name)
+        await update()
+        toast(response.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -46,10 +52,6 @@ const Dashboard = () => {
             transition: Bounce,
         });
     }
-
-
-
-
 
     return (
         <>
@@ -72,6 +74,7 @@ const Dashboard = () => {
 
                 <form className="max-w-2xl mx-auto" action={handleSubmit}>
 
+                    {/* input for name */}
                     <div className='my-2'>
                         <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">Name</label>
                         <input value={form.name ? form.name : ""} onChange={handleChange} type="text" name='name' id="name" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
@@ -79,7 +82,7 @@ const Dashboard = () => {
                     {/* input for email */}
                     <div className="my-2">
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
-                        <input value={form.email ? form.email : ""} onChange={handleChange} type="email" name='email' id="email" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                        <input value={form.email ? form.email : ""} onChange={handleChange} type="email" name='email' id="email" className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed" readOnly title='Email can&apos;t be modified' />
                     </div>
                     {/* input forusername */}
                     <div className='my-2'>
