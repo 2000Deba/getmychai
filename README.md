@@ -1,6 +1,6 @@
 # ☕ Get Me a Chai
 
-![Get Me a Chai](./screenshots/banner.png)
+![Get Me a Chai](/screenshots/banner.png)
 
 A full-stack web application where creators can receive support from their fans in the form of "chai" (contributions). Built using **Next.js**, **MongoDB**, **Razorpay**, and **NextAuth**, it provides a seamless and secure payment experience.
 
@@ -24,12 +24,12 @@ A full-stack web application where creators can receive support from their fans 
 
 ## 📸 Screenshots
 
-![Homepage](./screenshots/getmychai.png)
-![About](./screenshots/about.jpg)
-![Dashboard](./screenshots/dashboard.jpg)
-![Login](./screenshots/login.jpg)
-![Profile](./screenshots/yourpage.jpg)
-![Payment](./screenshots/payment.jpg)
+![Homepage](/screenshots/getmychai.png)
+![About](/screenshots/about.jpg)
+![Dashboard](/screenshots/dashboard.jpg)
+![Login](/screenshots/login.jpg)
+![Profile](/screenshots/yourpage.jpg)
+![Payment](/screenshots/payment.jpg)
 
 ---
 
