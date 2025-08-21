@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☕ Get Me a Chai
 
-## Getting Started
+![Get Me a Chai](./screenshots/banner.png)
 
-First, run the development server:
+A full-stack web application where creators can receive support from their fans in the form of "chai" (contributions). Built using **Next.js**, **MongoDB**, **Razorpay**, and **NextAuth**, it provides a seamless and secure payment experience.
 
+---
+
+## 📖 About
+
+**Get Me a Chai** is a **Buy Me a Coffee**-style platform that allows creators to connect with their supporters and receive payments directly. Fans can show their appreciation by buying "chai" for their favorite creators. The project is fully responsive, deployed on **Vercel**, and integrated with **MongoDB Atlas** for data storage and **Razorpay** for secure transactions.
+
+---
+
+## 🚀 Features
+
+- 🔐 **Secure authentication** with **NextAuth** (Google & GitHub OAuth)
+- 💳 **Seamless Razorpay payment integration**
+- 📦 **MongoDB Atlas** for scalable data storage
+- 📱 **Fully responsive UI** built with **Tailwind CSS**
+- 🌐 **Deploy-ready** with **Vercel**
+
+---
+
+## 📸 Screenshots
+
+![Homepage](./screenshots/getmychai.png)
+![About](./screenshots/about.jpg)
+![Dashboard](./screenshots/dashboard.jpg)
+![Login](./screenshots/login.jpg)
+![Profile](./screenshots/yourpage.jpg)
+![Payment](./screenshots/payment.jpg)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** Next.js, React, Tailwind CSS  
+**Backend:** Node.js, Express.js (API Routes via Next.js)  
+**Database:** MongoDB Atlas  
+**Authentication:** NextAuth (Google & GitHub OAuth)  
+**Payments:** Razorpay  
+**Deployment:** Vercel
+
+---
+
+## ⚡ Getting Started
+
+Follow these steps to set up the project locally:
+
+### 1️⃣ Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/2000Deba/getmychai.git
+cd getmychai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3️⃣ Set up environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create a `.env.local` file in the root folder and add:
 
-## Learn More
+```env
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+NEXT_PUBLIC_URL=http://localhost:3000
+GITHUB_ID=your_github_oauth_id
+GITHUB_SECRET=your_github_oauth_secret
+GOOGLE_ID=your_google_oauth_id
+GOOGLE_SECRET=your_google_oauth_secret
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4️⃣ Run the development server
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app will be live at **http://localhost:3000** 🚀
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is optimized for **Vercel** deployment:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Push your code to GitHub.
+2. Go to [Vercel](https://vercel.com/).
+3. Import the project from GitHub.
+4. Add your environment variables in Vercel's dashboard.
+5. Deploy 🚀
+
+Live Demo: **[https://getmychai.vercel.app/](https://getmychai.vercel.app/)**
+
+---
+
+## 👨‍💻 Author
+
+**Debasish Seal**  
+💻 [GitHub](https://github.com/2000Deba)  
+🌐 [Portfolio](https://portfolio-mqbv.vercel.app/)  
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project, please consider giving it a ⭐ on [GitHub](https://github.com/2000Deba/getmychai) 🙌
+
+---
