@@ -105,7 +105,7 @@ const PaymentPage = ({ username }) => {
 
             <div className='cover w-full bg-red-50 relative'>
                 <img className='object-cover w-full h-48 md:h-[350px] shadow-blue-700 shadow-sm' src={currentUser.coverpic} alt="" />
-                <div className='absolute -bottom-20 right-[31%] md:right-[44.5%] border-white overflow-hidden border-2 rounded-full size-36'>
+                <div className='absolute -bottom-20 right-[33%] md:right-[44.5%] border-white overflow-hidden border-2 rounded-full size-36'>
                     <img className='rounded-full object-cover size-36' width={128} height={128} src={currentUser.profilepic} alt="" />
                 </div>
             </div>
